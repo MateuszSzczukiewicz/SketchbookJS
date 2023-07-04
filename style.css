@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 10px 30px;
+    padding: 0 30px;
 }
 
 .header__title {
@@ -17,12 +17,42 @@
     font-family: Lato, sans-serif;
 }
 
-
-
 .header__toolbox {
     display: flex;
     align-items: center;
     font-size: 18px;
     font-family: Lato, sans-serif;
     margin: 20px;
+}
+
+.header__color {
+    border: none;
+    width: 100px;
+    height: 25px;
+    margin: 0 20px;
+    background-color: white;
+}
+
+.header__size {
+    border: none;
+    width: 100px;
+    height: 25px;
+    font-size: 18px;
+    outline: none;
+}
+
+.header__buttonBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__button {
+    border: none;
+    margin-right: 10px;
+    width: 90px;
+    height: 30px;
+    font-size: 20px;
+    background-color: #3873f5;
+    font-family: Lato, sans-serif;
+    color: white;
 }
