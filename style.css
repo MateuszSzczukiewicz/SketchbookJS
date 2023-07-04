@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #68bceb;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.header__title {
+    font-size: 36px;
+    font-family: Lato, sans-serif;
+}
+
+
+
+.header__toolbox {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: Lato, sans-serif;
+    margin: 20px;
+}
