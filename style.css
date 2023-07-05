@@ -5,16 +5,17 @@
 }
 
 .header {
-    background-color: #68bceb;
     display: flex;
+    justify-content: space-between;
+    background-color: #68bceb;
     align-items: center;
     width: 100%;
-    padding: 0 30px;
 }
 
 .header__title {
     font-size: 36px;
     font-family: Lato, sans-serif;
+    margin: 0 30px;
 }
 
 .header__toolbox {
@@ -22,7 +23,7 @@
     align-items: center;
     font-size: 18px;
     font-family: Lato, sans-serif;
-    margin: 20px;
+    margin: 10px 0;
 }
 
 .header__color {
@@ -37,13 +38,14 @@
     border: none;
     width: 100px;
     height: 25px;
+    margin: 0 20px;
     font-size: 18px;
     outline: none;
 }
 
 .header__buttonBox {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
 }
 
 .header__button {
@@ -55,4 +57,10 @@
     background-color: #3873f5;
     font-family: Lato, sans-serif;
     color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.header__button:hover {
+    background-color: blue;
 }

@@ -10,22 +10,22 @@
 </head>
 <body>
   <header class="header">
-    <h1 class="header__title">Sketchbook</h1>
     <div class="header__toolbox">
+    <h1 class="header__title">Sketchbook</h1>
       <span class="header__tool">Pencil color:</span>
       <input type="color" class="header__color" id="pencil-color"></input>
       <span class="header__tool">Background color:</span>
       <input type="color" class="header__color" id="background-color"></input>
-      <span class="header__tool">Pencil size</span>
-      <input type="number" class="header__size" id="pencil-size"></input>
+      <span class="header__tool">Pencil size:</span>
+      <input type="number" class="header__size" value="10" id="pencil-size"></input>
+    </div>
       <div class="header__buttonBox">
         <button class="header__button" id="clear">Clear</button>
         <button class="header__button" id="save">Save</button>
       </div>
-    </div>
   </header>
 
-<script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
-<script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
