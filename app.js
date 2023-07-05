@@ -7,9 +7,11 @@ const save = document.getElementById("save");
 
 let pencilColorValue = pencilColor.value;
 let pencilSizeValue = pencilSize.value;
+let backgroundColorValue = backgroundColor.value;
 
 function setup() {
-  createCanvas(2000, 1000);
+  const canvas = createCanvas(2000, 1000);
+  canvas.mouseClicked(changeBackground);
 }
 
 function draw() {
@@ -28,7 +30,10 @@ function changeSize() {
   pencilSizeValue = pencilSize.value;
 }
 
-console.log(pencilColorValue);
+function changeBackground() {
+  backgroundColorValue = backgroundColor.value;
+  background(backgroundColorValue);
+}
 
 pencilColor.addEventListener("input", changeColor);
 pencilSize.addEventListener("input", changeSize);
