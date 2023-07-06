@@ -47,6 +47,16 @@ function stopDrawing() {
   isDrawing = false;
 }
 
+function clearCanvas() {
+  background(backgroundColorValue);
+}
+
+function saveCanvas() {
+  saveCanvas(canvas, "PieceOfArt", "jpg");
+}
+
 pencilColor.addEventListener("input", changeColor);
 pencilSize.addEventListener("input", changeSize);
 backgroundColor.addEventListener("input", changeBackground);
+clear.addEventListener("click", clearCanvas);
+save.addEventListener("click", saveCanvas);
