@@ -8,16 +8,13 @@ const save = document.getElementById("save");
 let pencilColorValue = pencilColor.value;
 let pencilSizeValue = pencilSize.value;
 let backgroundColorValue = backgroundColor.value;
-let isDrawing = false;
 
 function setup() {
-  const canvas = createCanvas(2000, 1000);
-  canvas.mousePressed(startDrawing);
-  canvas.mouseReleased(stopDrawing);
+  const canvas = createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  if (isDrawing) {
+  if (mouseIsPressed) {
     stroke(pencilColorValue);
     strokeWeight(pencilSizeValue);
     line(mouseX, mouseY, pmouseX, pmouseY);
@@ -33,21 +30,7 @@ function changeSize() {
 }
 
 function changeBackground() {
-  if (!isDrawing) {
-    backgroundColorValue = backgroundColor.value;
-    background(backgroundColorValue);
-  }
-}
-
-function startDrawing() {
-  isDrawing = true;
-}
-
-function stopDrawing() {
-  isDrawing = false;
-}
-
-function clearCanvas() {
+  backgroundColorValue = backgroundColor.value;
   background(backgroundColorValue);
 }
 
@@ -58,5 +41,5 @@ function saveCanvas() {
 pencilColor.addEventListener("input", changeColor);
 pencilSize.addEventListener("input", changeSize);
 backgroundColor.addEventListener("input", changeBackground);
-clear.addEventListener("click", clearCanvas);
+clear.addEventListener("click", changeBackground);
 save.addEventListener("click", saveCanvas);
